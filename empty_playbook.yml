@@ -1,0 +1,10 @@
+---
+# Playbook with no ouptut used within AWX so that the inventories repository can be refreshed
+- hosts: localhost
+  gather_facts: no
+  connection: local
+  ignore_unreachable: yes
+  tasks:
+    - name: Message
+      debug:
+        msg: Test Message
